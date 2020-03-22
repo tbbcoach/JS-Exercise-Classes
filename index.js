@@ -136,6 +136,12 @@ constructor(Obj) {
   this.favLanguage = Obj.favLanguage;
   this.catchPhrase = Obj.catchPhrase;
 }
+demo(subject) {
+  return `Today we are learning about ${subject}.`;
+}
+grade(student, subject) {
+  return `${student.name} + ${subject}`;
+}
 }
 
 /*
