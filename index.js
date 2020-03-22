@@ -159,8 +159,22 @@ grade(student, subject) {
         + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
-class Student {
-
+class Student extends Lambdasian {
+constructor(Obj) {
+  super(Obj);
+  this.previousBackground = Obj.previousBackground;
+  this.className = Obj.className;
+  this.favSubjects = Obj.favSubjects;
+}
+listSubjects(favSubject) {
+  return `Loving ${favSubject}!`
+}
+PRAssignment(subject) {
+  return  `has submitted a PR for ${subject}`;
+}
+sprintChallenge(subject) {
+  return `student.name has begun spring challenge on ${subject}.`;
+}
 }
 
 /*
@@ -176,8 +190,19 @@ class Student {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
+class ProjectManager extends Instructor{
+  constructor(Obj) {
+  super(Obj)
+  this.gradClassName = Obj.gradClassName;
+  this.favInstructor = Obj.favInstructor;
+  }
+  standup(channel) {
+    return `${name} + announces to ${channel}, @channel standy times!`;
+  }
+  debugsCode(student, subject) {
+    return `${name} debugs ${student.name}'s code on ${subject}.`;
 
+  }
 }
 
 /*
