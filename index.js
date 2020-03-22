@@ -167,13 +167,13 @@ constructor(Obj) {
   this.favSubjects = Obj.favSubjects;
 }
 listSubjects(favSubject) {
-  return `Loving ${favSubject}!`
+  return `Loving ${this.favSubjects}!`
 }
 PRAssignment(subject) {
-  return  `has submitted a PR for ${subject}`;
+  return `${this.name} has submitted a PR for ${subject}`;
 }
 sprintChallenge(subject) {
-  return `student.name has begun spring challenge on ${subject}.`;
+  return `${this.name} has begun spring challenge on ${subject}.`;
 }
 }
 
