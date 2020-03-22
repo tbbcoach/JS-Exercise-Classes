@@ -85,9 +85,10 @@ class Car {
   fill = function(gallons) {
     return (this.tank += gallons);
 }
-  drive = function() {
-    
-  }
+  drive = function(distance) {
+    return this.odometer + distance;
+    return this.tank - this.milesPerGallon;
+}
 }
 
 /*
@@ -103,11 +104,19 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  
+  constructor (Obj) {
+    this.name = Obj.name;
+    this.age = Obj.age;
+    this.location = Obj.location;
+  }
+  speak(name, location) {
+    return `Hello my name is ${this.name} + I am from ${this.location}`;
+  }
 }
 
 /*
-  TASK 4
+  TASK 4n
     - Write an Instructor class extending Lambdasian.
     - Its constructor takes a single argument - an object with the following keys:
         + All the keys used to initialize instances of Lambdasian.
@@ -120,8 +129,10 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor {
-
+class Instructor extends Lambdasian {
+constructor() {
+  super()
+}
 }
 
 /*
